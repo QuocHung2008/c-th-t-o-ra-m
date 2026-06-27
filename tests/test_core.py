@@ -67,6 +67,47 @@ def test_dia_ly_and_gdcd_are_excluded_by_default() -> None:
         assert result.target_label not in {"Dia_ly", "GDCD"}
 
 
+def test_diacritic_collision_does_not_match_tuong_as_tuong() -> None:
+    rules = load_keyword_rules(ROOT / "data" / "keywords.json")
+    negative = load_negative_rules(ROOT / "data" / "negative_keywords.json")
+    result = score_document(
+        filename_text="",
+        body_text="Ý tưởng thuật toán dùng hai con trỏ và truy vấn dữ liệu.",
+        keyword_rules=rules,
+        negative_rules=negative,
+        filename_multiplier=2.5,
+        body_multiplier=1.0,
+    )
+    assert "Ngu_van" not in result.scores
+
+
+def test_accented_tuong_still_matches_ngu_van() -> None:
+    rules = load_keyword_rules(ROOT / "data" / "keywords.json")
+    negative = load_negative_rules(ROOT / "data" / "negative_keywords.json")
+    result = score_document(
+        filename_text="",
+        body_text="Nghệ thuật tuồng và sân khấu tuồng trong văn học dân gian.",
+        keyword_rules=rules,
+        negative_rules=negative,
+        filename_multiplier=2.5,
+        body_multiplier=1.0,
+    )
+    assert result.scores["Ngu_van"].score >= 40
+
+
+def test_prevoi_and_vact_filename_regressions() -> None:
+    classifier = DocumentClassifier(ClassificationConfig(excluded_subjects=()))
+    cases = {
+        "PreVOI 19-11-2025.pdf": "Tin_hoc",
+        "Đề VACT dự đoán 1000 - File đề.pdf": "Toan",
+    }
+    for filename, expected in cases.items():
+        result = classifier.classify(Path("/tmp") / filename)
+        assert result.status == ClassificationStatus.SUBJECT
+        assert result.target_label == expected
+        assert result.extraction_engine == "filename"
+
+
 def test_classifier_marks_unknown_for_empty_supported_file(tmp_path: Path) -> None:
     path = tmp_path / "empty.docx"
     path.write_bytes(

@@ -78,7 +78,14 @@ def _score_rules(
 ) -> None:
     text_forms = normalize_text(text)
     text_has_diacritics = has_vietnamese_diacritics(text_forms.normalized)
+    accentless_tokens = text_forms.accentless.split()
     for rule in rules:
+        if (
+            source == "filename"
+            and _is_unsafe_short_alias(rule.keyword)
+            and not _short_alias_allowed(accentless_tokens, rule.keyword)
+        ):
+            continue
         matches = _find_rule_matches(rule, text_forms.normalized, text_forms.accentless, text_has_diacritics)
         for match_source, match_count in matches:
             if not match_count:

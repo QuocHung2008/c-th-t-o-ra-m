@@ -26,7 +26,9 @@
     "co hoc",
     "dien tu",
     "quang hoc",
-    "nhiet hoc"
+    "nhiet hoc",
+    "lý",
+    "lí"
   ],
   "Hoa_hoc": [
     "hoa",
@@ -38,7 +40,9 @@
     "huu co",
     "vo co",
     "dai cuong hoa",
-    "phan ung hoa hoc"
+    "phan ung hoa hoc",
+    "hóa",
+    "hoá"
   ],
   "Sinh_hoc": [
     "sinh",
@@ -62,7 +66,8 @@
     "literature",
     "tap lam van",
     "tieng viet",
-    "doc hieu"
+    "doc hieu",
+    "văn"
   ],
   "Lich_su": [
     "su",
@@ -73,7 +78,8 @@
     "history",
     "su viet nam",
     "su the gioi",
-    "ls"
+    "ls",
+    "sử"
   ],
   "Dia_ly": [
     "dia",
@@ -98,7 +104,8 @@
     "anh van",
     "anh ngu",
     "ielts",
-    "toeic"
+    "toeic",
+    "tiếng anh"
   ],
   "Tin_hoc": [
     "tin",
@@ -112,7 +119,7 @@
     "cntt",
     "cs",
     "prevoi",
-    "voi"
+    "tin học"
   ],
   "GDCD": [
     "gdcd",

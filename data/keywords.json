@@ -781,6 +781,22 @@
     {
       "keyword": "lực tương tác",
       "weight": 38
+    },
+    {
+      "keyword": "lý",
+      "weight": 38
+    },
+    {
+      "keyword": "lí",
+      "weight": 38
+    },
+    {
+      "keyword": "môn lý",
+      "weight": 48
+    },
+    {
+      "keyword": "môn lí",
+      "weight": 48
     }
   ],
   "Hoa_hoc": [
@@ -1179,6 +1195,22 @@
     {
       "keyword": "thuc hanh hoa hoc",
       "weight": 10
+    },
+    {
+      "keyword": "hóa",
+      "weight": 38
+    },
+    {
+      "keyword": "hoá",
+      "weight": 38
+    },
+    {
+      "keyword": "môn hóa",
+      "weight": 48
+    },
+    {
+      "keyword": "môn hoá",
+      "weight": 48
     }
   ],
   "Sinh_hoc": [
@@ -1871,6 +1903,14 @@
     {
       "keyword": "sân khấu tuồng",
       "weight": 56
+    },
+    {
+      "keyword": "văn",
+      "weight": 38
+    },
+    {
+      "keyword": "môn văn",
+      "weight": 48
     }
   ],
   "Lich_su": [
@@ -2133,6 +2173,14 @@
     {
       "keyword": "cac cuoc khai kien chong ngoai xam",
       "weight": 13
+    },
+    {
+      "keyword": "sử",
+      "weight": 38
+    },
+    {
+      "keyword": "môn sử",
+      "weight": 48
     }
   ],
   "Dia_ly": [
@@ -2633,6 +2681,14 @@
     {
       "keyword": "non defining relative clause",
       "weight": 14
+    },
+    {
+      "keyword": "anh",
+      "weight": 30
+    },
+    {
+      "keyword": "môn anh",
+      "weight": 48
     }
   ],
   "Tin_hoc": [
@@ -3021,14 +3077,6 @@
       "weight": 40
     },
     {
-      "keyword": "input",
-      "weight": 22
-    },
-    {
-      "keyword": "output",
-      "weight": 22
-    },
-    {
       "keyword": "test case",
       "weight": 32
     },
@@ -3047,6 +3095,14 @@
     {
       "keyword": "truy vấn",
       "weight": 24
+    },
+    {
+      "keyword": "tin",
+      "weight": 30
+    },
+    {
+      "keyword": "môn tin",
+      "weight": 48
     }
   ],
   "GDCD": [

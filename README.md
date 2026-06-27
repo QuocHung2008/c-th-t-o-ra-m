@@ -15,6 +15,7 @@ Cong cu phan loai file `.docx` va `.pdf` theo mon hoc THPT Viet Nam bang tu khoa
 - PDF extraction nhieu lop: `pdfplumber` -> `PyMuPDF` -> `pypdf`.
 - OCR tuy chon cho PDF scan bang EasyOCR hoac PaddleOCR.
 - Tu khoa co trong so, match bang regex, ho tro dau gach noi, dau cau, nhieu khoang trang va van ban khong dau.
+- Matcher uu tien tieng Viet co dau khi van ban co dau, chi fallback khong dau khi an toan. Cac tu don de nhieu nhu `van`, `ly`, `hoa`, `tin`, `su`, `tuong` bi chan neu thieu ngu canh.
 - File khong ro mon hoc vao `_Khong_xac_dinh`.
 - File co dau hieu khong phai tai lieu mon hoc vao `_Khong_phai_mon_hoc`.
 - File bi gan diem qua sat nhau vao `_Can_kiem_tra`.
@@ -104,6 +105,8 @@ Sua `data/negative_keywords.json` de nhan dien file hanh chinh, hop dong, hoa do
 Sua `data/aliases.json` de bo sung cach goi ten mon trong ten file. Alias chi ap dung cho ten file, khong ap dung cho noi dung, de tranh truong hop tu ngan nhu `anh`, `van`, `su` lam lech ket qua.
 
 Tu khoa trong `data/keywords.json` da duoc mo rong theo cac mach noi dung cua Chuong trinh GDPT 2018 cho cac mon dang bat: Toan, Vat ly, Hoa hoc, Sinh hoc, Ngu van, Tieng Anh, Tin hoc, Lich su.
+
+Nen them keyword bang tieng Viet co dau khi co the. Vi du them `tuồng` thay vi chi them `tuong`; engine se khop `tuồng` voi Ngu van nhung khong khop nham `ý tưởng`, `tương tác`, hay `đối tượng`.
 
 ## Ghi chu ve PDF nang
 
